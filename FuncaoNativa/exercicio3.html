@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Restaurante JS</h1>
+    <hr>
+    <p>
+        Buffet por Quilo R$:
+        <input type="text" id="inQuilo">
+    </p>
+
+    <p>
+        Consumo do Cliente (gr):
+        <input type="text" id="inGrama">
+    </p>
+
+    <p>
+        <input type="button" value="Calcular Preço" id="btnCalculo">
+    </p>
+    <p id="outQuilo"></p>
+    <p id="outCliente"></p>
+
+    <script>
+        function consumoCliente(primeiro, resultado, quantidade){
+            let inQuilo = document.getElementById('inQuilo')
+            let inGrama = document.getElementById('inGrama')
+            let outQuilo = document.getElementById('outQuilo')
+            let outCliente = document.getElementById('outCliente')
+
+            let quilo= inQuilo.value
+            let grama = inGrama.value
+
+            if(primeiro / 100){
+                document.getElementById('inQuilo')
+            }else if(resultado * quantidade){
+                document.getElementById('inGrama')
+            }
+            //Alterar o contéudo do campo
+            outTitulo.textContent = `${quilo}`
+            outCliente.textContent = `Valor a pagar ${grama}`
+        }
+
+        
+        let btnCalculo = document.getElementById('btnCalculo')
+        btnCalculo.addEventListener('click', consumoCliente)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>Revenda de Veículos JS</h1>
+    <hr>
+    <p>
+        Veículo:
+        <input type="text" id="inVeiculo">
+    </p>
+
+    <p>
+        Preço R$:
+        <input type="text" id="inPreco">
+    </p>
+
+    <p>
+        <input type="button" value=" Ver Promoção " id="btnModelo">
+    </p>
+    <p id="outVeiculo"></p>
+    <p id="outRevenda"></p>
+
+    <script>
+        function entradaSaldo(valor, preco, porcentagem){
+            let inVeiculo = document.getElementById('inVeiculo')
+            let inPreco = document.getElementById('inPreco')
+            let outVeiculo = document.getElementById('outVeiculo')
+            let outRevenda = document.getElementById('outRevenda')
+
+            let veiculo = inVeiculo.value
+            let preco = inPreco.value
+
+            if(preco = 50 * (porcentagem/100) ){
+                document.getElementById('inPreco').value = '50% * preco'
+            }else if(valor / 12){
+                document.getElementById('inPreco').value
+            }
+            
+            outVeiculo.textContent = `Veículo ${veiculo}`
+            outRevenda.textContent = `Entrada de ${preco}`
+        }
+
+        let btnModelo = document.getElementById('btnModelo')
+        btnModelo.addEventListener('click', entradaSaldo)
+        
+    </script>
+    
+</body>
+</html>

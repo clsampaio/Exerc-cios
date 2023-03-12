@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Farmácia JS</h1>
+    <hr>
+    <p>
+        Medicamento
+        <input type="text" id="inMedi">
+    </p>
+
+    <p> 
+        Preço R$:
+        <input type="text" id="inValor">
+    </p>
+
+    <p>
+        <input type="button" value="Mostrar Promoção" id="btnPromoção">
+    </p>
+    <p id="outMidi"></p>
+    <p id="outAmostra"></p>
+
+    <script>
+        function valorProduto(valores){
+            let inMedi = document.getElementById('inMedi')
+            let inValor = document.getElementById('inValor')
+            let outMedi = document.getElementById('outMedi')
+            let outAmostra = document.getElementById('outAmostra')
+
+            let medi= inMedi.value
+            let valor = inValor.value
+
+            console.log(Math.pow(valores, 2))
+            
+            outMedi.textContent = `Promoção de ${medi}`
+            outAmostra.textContent = `Leve 2 por apenas ${valor}`
+        }
+
+        
+        let btnPromoção = document.getElementById('btnPromoção')
+        btnPromoção.addEventListener('click', valorProduto)
+    </script>
+</body>
+</html>
